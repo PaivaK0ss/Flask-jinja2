@@ -1,0 +1,29 @@
+[
+    {
+        "codigo": "123456",
+        "nome": "Enigma do Medo",
+        "criador": "Cellbit",
+        "genero": "Investigação e Suspense",
+        "tamanho": 1.2,
+        "ano_lancamento": 2024,
+        "plataforma": "Computador"
+    },
+    {
+        "codigo": "654321",
+        "nome": "Nitro e Necros",
+        "criador": "Darthvaldo",
+        "genero": "Roguelite",
+        "tamanho": 0.6,
+        "ano_lancamento": 2026,
+        "plataforma": "Computador"
+    },
+    {
+        "codigo": "412566",
+        "nome": "Lego Batman",
+        "criador": "Lego, DC",
+        "genero": "Ação, Aventura",
+        "tamanho": 2.3,
+        "ano_lancamento": 2026,
+        "plataforma": "Computador e Console"
+    }
+]

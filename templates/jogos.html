@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block titulo %}
+    <title>Jogos</title>
+{% endblock titulo %}
+
+{% block conteudo %}
+<h1 class="display-6">Jogos</h1>
+<div class="col-sm-8">
+    <table class="table table-hover table-light table-striped table-striped-columns">
+        <thead>
+            <tr class="table-dark">
+                {% for key in jogos[0].items() %}
+                    {% if key[0] == 'codigo' %}
+                        <th>{{ key[0] | upper }}</th>
+                    {% else %}
+                        <th>{{ key[0] | replace('_',' ') | capitalize }}</th>
+                    {% endif %}
+                {% endfor %}
+            </tr>
+        </thead>
+        {% for jogo in jogos%}
+            <tbody>
+                <tr>
+                    <td>{{ jogo['codigo'] }}</td>
+                    <td>{{ jogo.nome }}</td>
+                    <td>{{ jogo.criador }}</td>
+                    <td>{{ jogo.genero }}</td>
+                    <td>{{ jogo.tamanho }} GB</td>
+                    <td>{{ jogo.ano_lancamento }}</td>
+                    <td>{{ jogo.plataforma }}</td>
+                </tr>
+            </tbody>
+        {% endfor %}
+    </table>
+</div>
+{% endblock conteudo %}
