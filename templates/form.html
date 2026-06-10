@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block titulo %}
+    <title>Formulário de Jogos</title>
+    <style>
+        input {
+            width: 100%;
+        }
+        .td_lbl {
+            width: 35%;
+        }
+        .table {
+            width: 45% !important;
+            border: solid 1px black;
+        }
+    </style>
+{% endblock titulo %}
+
+{% block conteudo %}
+<h1 class="display-6">Formulário de Jogos</h1>
+<div class="col-sm-8">
+    <form action="/jogos/criar" method="post">
+        <input type="hidden" name="acao" value="cadastrar">
+        <table class="table table-hover table-light table-striped table-striped-columns">
+            <tbody>
+                <tr>
+                    <td class="td_lbl"><label>Código: </label></td>
+                    <td class="td_input"><input type="text" name="codigo" required></td>
+                </tr>
+                <tr>
+                    <td class="td_lbl"><label>Nome: </label></td>
+                    <td class="td_input"><input type="text" name="nome" required></td>
+                </tr>
+                <tr>
+                    <td class="td_lbl"><label>Criador: </label></td>
+                    <td class="td_input"><input type="text" name="criador" required></td>
+                </tr>
+                <tr>
+                    <td class="td_lbl"><label>Gênero: </label></td>
+                    <td class="td_input"><input type="text" name="genero" required></td>
+                </tr>
+                <tr>
+                    <td class="td_lbl"><label>Tamanho (em GB): </label></td>
+                    <td class="td_input"><input type="text" name="tamanho" required></td>
+                </tr>
+                <tr>
+                    <td class="td_lbl"><label>Ano de lançamento: </label></td>
+                    <td class="td_input"><input type="text" name="ano_lancamento" required></td>
+                </tr>
+                <tr>
+                    <td class="td_lbl"><label>Plataforma: </label></td>
+                    <td class="td_input"><input type="text" name="plataforma" required></td>
+                </tr>
+            </tbody>
+        </table>
+        <button type="submit">Salvar Jogo</button>
+    </form>
+</div>
+{% endblock conteudo %}
