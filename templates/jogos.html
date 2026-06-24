@@ -4,8 +4,11 @@
 {% endblock titulo %}
 
 {% block conteudo %}
-<h1 class="display-6">Jogos</h1>
-<div class="col-sm-8">
+<div class="header">
+    <h1 class="display-6">Jogos</h1>
+    <a href="/jogos/criar"><button>Adicionar novo jogo</button></a>
+</div>
+<div class="col-sm-12">
     <table class="table table-hover table-light table-striped table-striped-columns">
         <thead>
             <tr class="table-dark">
@@ -16,18 +19,23 @@
                         <th>{{ key[0] | replace('_',' ') | capitalize }}</th>
                     {% endif %}
                 {% endfor %}
+                <th></th>
+                <th></th>
             </tr>
         </thead>
         {% for jogo in jogos%}
             <tbody>
                 <tr>
-                    <td>{{ jogo['codigo'] }}</td>
-                    <td>{{ jogo.nome }}</td>
-                    <td>{{ jogo.criador }}</td>
-                    <td>{{ jogo.genero }}</td>
-                    <td>{{ jogo.tamanho }} GB</td>
-                    <td>{{ jogo.ano_lancamento }}</td>
-                    <td>{{ jogo.plataforma }}</td>
+                    <td class="col-sm-1">{{ jogo['codigo'] }}</td>
+                    <td class="col-sm-1">{{ jogo.nome }}</td>
+                    <td class="col-sm-1">{{ jogo.criador }}</td>
+                    <td class="col-sm-2">{{ jogo.genero }}</td>
+                    <td class="col-sm-1">{{ jogo.tamanho }} GB</td>
+                    <td class="col-sm-1">{{ jogo.ano_lancamento }}</td>
+                    <td class="col-sm-2">{{ jogo.plataforma }}</td>
+                    <td class="col-sm-1"><a href="/jogos/alterar/{{ jogo['codigo'] }}"><button>Alterar</button></a></td>
+                    <td class="col-sm-1"><a href="/jogos/excluir/{{ jogo['codigo'] }}"><button>Excluir</button></a></td>
+
                 </tr>
             </tbody>
         {% endfor %}

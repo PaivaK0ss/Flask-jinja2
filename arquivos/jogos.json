@@ -4,8 +4,8 @@
         "nome": "Enigma do Medo",
         "criador": "Cellbit",
         "genero": "Investigação e Suspense",
-        "tamanho": 1.2,
-        "ano_lancamento": 2024,
+        "tamanho": "1.5",
+        "ano_lancamento": "2024",
         "plataforma": "Computador"
     },
     {
@@ -25,23 +25,5 @@
         "tamanho": 2.3,
         "ano_lancamento": 2026,
         "plataforma": "Computador e Console"
-    },
-    {
-        "codigo": "122536",
-        "nome": "Pokémon Legends ZA",
-        "criador": "Game Freak",
-        "genero": "RPG, Ação e Aventura",
-        "tamanho": "5",
-        "ano_lancamento": "2025",
-        "plataforma": "Nintendo Switch, Nintendo Switch 2"
-    },
-    {
-        "codigo": null,
-        "nome": null,
-        "criador": null,
-        "genero": null,
-        "tamanho": null,
-        "ano_lancamento": null,
-        "plataforma": null
     }
 ]

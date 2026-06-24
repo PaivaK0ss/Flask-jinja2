@@ -1,42 +1,44 @@
 {% extends "base.html" %}
 {% block titulo %}
-    <title>Formulário de Jogos</title>
+<title>Formulário de Jogos</title>
 {% endblock titulo %}
 
 {% block conteudo %}
 <h1 class="display-6">Formulário de Jogos</h1>
 <div class="col-sm-8">
-    <form action="/jogos/criar" method="post">
+    <form action="/jogos/alterar/{{ jogo['codigo']}}" method="post">
         <input type="hidden" name="acao" value="cadastrar">
         <table class="table table_form table-hover table-light table-striped table-striped-columns">
             <tbody>
                 <tr>
                     <td class="td_lbl"><label>Código: </label></td>
-                    <td class="td_input"><input type="text" name="codigo" required></td>
+                    <td class="td_input"><input type="text" name="codigo" value="{{ jogo['codigo'] }}" readonly></td>
                 </tr>
                 <tr>
                     <td class="td_lbl"><label>Nome: </label></td>
-                    <td class="td_input"><input type="text" name="nome" required></td>
+                    <td class="td_input"><input type="text" name="nome" value="{{ jogo.nome }}" required></td>
                 </tr>
                 <tr>
                     <td class="td_lbl"><label>Criador: </label></td>
-                    <td class="td_input"><input type="text" name="criador" required></td>
+                    <td class="td_input"><input type="text" name="criador" value="{{ jogo.criador }}" required></td>
                 </tr>
                 <tr>
                     <td class="td_lbl"><label>Gênero: </label></td>
-                    <td class="td_input"><input type="text" name="genero" required></td>
+                    <td class="td_input"><input type="text" name="genero" value="{{ jogo.genero }}" required></td>
                 </tr>
                 <tr>
                     <td class="td_lbl"><label>Tamanho (em GB): </label></td>
-                    <td class="td_input"><input type="text" name="tamanho" required></td>
+                    <td class="td_input"><input type="text" name="tamanho" value="{{ jogo.tamanho }}" required></td>
                 </tr>
                 <tr>
                     <td class="td_lbl"><label>Ano de lançamento: </label></td>
-                    <td class="td_input"><input type="text" name="ano_lancamento" required></td>
+                    <td class="td_input"><input type="text" name="ano_lancamento" value="{{ jogo.ano_lancamento }}"
+                            required></td>
                 </tr>
                 <tr>
                     <td class="td_lbl"><label>Plataforma: </label></td>
-                    <td class="td_input"><input type="text" name="plataforma" required></td>
+                    <td class="td_input"><input type="text" name="plataforma" value="{{ jogo.plataforma }}" required>
+                    </td>
                 </tr>
             </tbody>
         </table>

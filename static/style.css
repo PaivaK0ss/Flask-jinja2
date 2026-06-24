@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+input {
+    width: 100%;
+}
+
+.td_lbl {
+    width: 35%;
+}
+
+.table_form {
+    width: 45% !important;
+    border: solid 1px black;
+}
+
+button {
+    border: 1.5px solid black;
+    border-radius: 20px;
+}
+
+.header {
+    margin: 0.5% 0 0.5% 1%;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
